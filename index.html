@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Your Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Dynamic Resume Builder</h1>
+        <form id="resumeForm">
+            <!-- Profile Image Input -->
+            <div>
+                <label for="profileImage">Profile Picture</label>
+                <input type="file" id="profileImage" accept="image/*" onchange="previewProfileImage()">
+                <div id="profilePreviewContainer">
+                    <img id="profilePreview" src="#" alt="Profile Preview" style="display:none; max-width: 100px; border-radius: 50%;">
+                </div>
+            </div>
+
+            <div>
+                <label for="name">Full-Name</label>
+                <input type="text" placeholder="Enter your name" id="name" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" placeholder="Enter your email" id="email" required>
+            </div>
+            <div>
+                <label for="contact">Contact</label>
+                <input type="number" placeholder="Enter your contact number" id="contact" required>
+            </div>
+            <div>
+                <label for="education">Education</label>
+                <input type="text" placeholder="Enter your education" id="education" required>
+            </div>
+            <div>
+                <label for="skills">Skills</label>  
+                <input type="text" placeholder="Enter your skills" id="skills" required>
+            </div>
+            <div>
+                <label for="workExperience">Work Experience</label>
+                <input type="text" placeholder="Enter your experience" id="workExperience" required>
+            </div>
+            <button type="submit">Submit Resume</button>
+        </form>
+    </div>
+
+    <div class="resume-container" id="resume" style="display:none;"></div>
+
+    <!-- Share Button -->
+    <div id="share-section" style="display:none;">
+        <button id="shareButton">Share Resume</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
